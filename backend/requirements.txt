@@ -1,0 +1,11 @@
+azure-functions
+fastapi
+uvicorn[standard]
+python-dotenv
+openai
+pydantic
+requests
+python-multipart
+azure-search-documents
+azure-cosmos
+azure-storage-blob
