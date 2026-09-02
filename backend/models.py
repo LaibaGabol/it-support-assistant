@@ -1,7 +1,7 @@
 from typing import Literal
 from pydantic import BaseModel
 
-
+#template for browser info
 class EnvironmentInfo(BaseModel):
     user_agent: str | None = None
     screen_resolution: str | None = None
@@ -10,9 +10,9 @@ class EnvironmentInfo(BaseModel):
     timestamp: str | None = None
     os: str | None = None
 
-
+#template for azure openAI answers
 class AgentDecision(BaseModel):
-    action: Literal["answer", "ask_followup", "escalate"]
+    action: Literal["answer", "ask_followup", "escalate"] #so if action : maybe. it should be invalid rather than causing bugs.
     message: str
     reasoning: str
     kb_sources: list[str] = []
